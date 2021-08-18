@@ -152,5 +152,9 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# git completion
 source /usr/share/git/completion/git-completion.bash
+
+# manage dotfile repository with 'config' alias
 alias config='/usr/bin/git --git-dir=/home/moritz/.cfg/ --work-tree=/home/moritz'

@@ -1,0 +1,50 @@
+{
+  "settingsVersion": "1.67",
+  "exclusionRules": [
+    {
+      "pattern": "https://vim-adventures.com/",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://www.overleaf.com/",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://www.overleaf.com",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://www.overleaf.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://www.overleaf.com/A/6079749f667965104ab713cb",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://keyboardchecker.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://zty.pe/*",
+      "passKeys": ""
+    }
+  ],
+  "filterLinkHints": false,
+  "waitForEnterForFilteredHints": true,
+  "hideHud": false,
+  "keyMappings": "map w createTab window\nmap W createTab incognito https://www.google.com/\n\" map <c-l> Vomnibar.activate\n\" map <c-n> createTab window\n\" map <c-N> createTab incognito https://www.google.com/",
+  "linkHintCharacters": "sadfjklewcmpgh",
+  "linkHintNumbers": "0123456789",
+  "newTabUrl": "pages/blank.html",
+  "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
+  "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
+  "regexFindMode": false,
+  "ignoreKeyboardLayout": false,
+  "scrollStepSize": 60,
+  "smoothScroll": true,
+  "grabBackFocus": false,
+  "searchEngines": "w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\nwde: https://de.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia Deutsch\nd: https://www.dict.cc/?s=%s\ny: https://www.youtube.com/results?search_query=%s Youtube\ngm: https://www.google.com/maps?q=%s Google maps\naz: https://smile.amazon.de//s/?field-keywords=%s Amazon",
+  "searchUrl": "https://www.google.com/search?q=",
+  "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF785),\n  color-stop(100%,#FFC542));\nborder: 1px solid #E3BE23;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: black;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
+}

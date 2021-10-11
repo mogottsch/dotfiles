@@ -1,11 +1,11 @@
 [user]
 	email = gottschling.moritz@gmail.com
 	name = Moritz
-	signingKey = null
+	signingKey = 3C9A43104AA7A65A7A87B3014FE7741CDBF96200
 [gpg]
-	program = null
+	program = gpg2
 [commit]
 	forceSignAnnotated = null
-	gpgSign = false
+	gpgSign = true
 [tag]
 	forceSignAnnotated = null

@@ -13,14 +13,52 @@
 
 " Set 'nocompatible' to ward off unexpected things that your distro might
 " have made, as well as sanely reset options when re-sourcing .vimrc
-set nocompatible
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+" Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-capslock'
+Plugin 'bkad/CamelCaseMotion'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'iamcco/markdown-preview.nvim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
+" Commented out bc of vundle
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
-if has('filetype')
-  filetype indent plugin on
-endif
+" if has('filetype')
+"   filetype indent plugin on
+" endif
 
 " Enable syntax highlighting
 if has('syntax')
@@ -165,7 +203,7 @@ map Y y$
 nnoremap <C-L> :nohl<CR><C-L>
 
 " Leave insert mode
-inoremap jj <Esc> 
+inoremap jj <Esc>
 
 " Keep it centered
 nnoremap n nzzzv
@@ -195,3 +233,13 @@ nnoremap <leader>k :m .-2<CR>==
 :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
+
+" plugin configuration
+let g:camelcasemotion_key = '<leader>'
+
+" markdown-preview
+
+
+" set to 1, nvim will open the preview window after entering the markdown buffer
+let g:mkdp_auto_start = 1
+

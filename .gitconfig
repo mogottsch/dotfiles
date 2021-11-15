@@ -1,7 +1,7 @@
 [user]
-	email = moritz@zendri.com
+	email = gottschling.moritz@gmail.com
 	name = Moritz
-	signingKey = D0763AA52FFFF97AB34F33E0EE52A4F98F6138E8
+	signingKey = 3C9A43104AA7A65A7A87B3014FE7741CDBF96200
 [gpg]
 	program = gpg2
 [commit]

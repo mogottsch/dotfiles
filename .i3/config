@@ -15,9 +15,9 @@ default_floating_border normal
 hide_edge_borders none
 
 # change borders
-bindsym $mod+u border none
-bindsym $mod+y border pixel 1
-bindsym $mod+n border normal
+# bindsym $mod+u border none
+# bindsym $mod+y border pixel 1
+# bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -235,9 +235,10 @@ for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
 for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
-for_window [class="(?i)virtualbox"] floating enable border normal
+# for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="copyq"] floating enable
+for_window [title="^zoom$"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -459,3 +460,4 @@ bindsym Ctrl+Prior exec "mosquitto_pub -h homeassistant.local -t ahk/light/incre
 bindsym Ctrl+Next exec "mosquitto_pub -h homeassistant.local -t ahk/light/decrease -m On -P zBRWCCVtX6vKXQ -u mqtt"
 bindsym $mod+Ctrl+Home exec "picom-trans -c -o 100" 
 bindsym Ctrl+Mod1+v exec "copyq toggle" 
+

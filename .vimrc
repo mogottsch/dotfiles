@@ -35,6 +35,7 @@ Plugin 'tpope/vim-capslock'
 Plugin 'bkad/CamelCaseMotion'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'iamcco/markdown-preview.nvim'
+Plugin 'machakann/vim-highlightedyank'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -242,4 +243,5 @@ let g:camelcasemotion_key = '<leader>'
 
 " set to 1, nvim will open the preview window after entering the markdown buffer
 let g:mkdp_auto_start = 1
-
+" set highlight to 1000 ms
+let g:highlightedyank_highlight_duration = 200

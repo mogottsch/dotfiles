@@ -1,0 +1,185 @@
+{
+  "keyboard.dispatch": "keyCode",
+  "git.autofetch": true,
+  "blade.format.enable": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.fontFamily": "'Consolas ligaturized v2', Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.suggestSelection": "first",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "python.languageServer": "Pylance",
+  "python.formatting.provider": "black",
+  "emmet.excludeLanguages": ["markdown"],
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "nunjucks": "html"
+  },
+  "emmet.preferences": {},
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnPaste": false
+  },
+  "[nunjucks]": {
+    "editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter"
+  },
+  "[blade]": {
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "python.pythonPath": "C:\\ProgramData\\Miniconda3\\python.exe",
+  "editor.formatOnSave": true,
+  "workbench.editor.wrapTabs": true,
+  "workbench.list.automaticKeyboardNavigation": false,
+  "rest-client.environmentVariables": {
+    "bookingapi-dev": {
+      "url": "https://dev-api.meldescheine.de/api",
+      "username": "DemoV",
+      "token": "",
+      "objekt": "2049",
+      "gemeinde": "1"
+    },
+    "bookingapi-prod": {
+      "host": "https://api.meldescheine.de/api",
+      "url": "https://api.meldescheine.de/api",
+      "username": "info@flueggerteich.de",
+      "token": "",
+      "objekt": "245",
+      "gemeinde": "1"
+    },
+    "quoteengineer-dev": {
+      "url": "http://localhost:11180",
+      "clientSecret": "",
+      "clientId": "1",
+      "authToken": ""
+    }
+  },
+  "files.associations": {
+    "*.html": "html"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "liveshare.anonymousGuestApproval": "accept",
+  "search.useReplacePreview": false,
+  "jupyter.askForKernelRestart": false,
+  "editor.linkedEditing": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "sync.gist": "f896d1fb735839ea47e40f003c0d62b8",
+  "terminal.external.linuxExec": "urxvt",
+  "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
+
+  "editor.tabSize": 4,
+  "editor.cursorStyle": "line",
+  "editor.insertSpaces": false,
+  "editor.lineNumbers": "relative",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "terminal.integrated.inheritEnv": false,
+
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "/home/moritz/.vimrc",
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["`", "`"],
+      "after": ["`", "`", "z", "z"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["p"],
+      "after": ["p", "g", "v", "y"]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.foldfix": true,
+  "vim.highlightedyank.enable": true,
+  // extensions
+  "vim.camelCaseMotion.enable": true,
+  "vim.easymotion": true,
+  // "vim.statusBarColorControl": true, // too laggy
+  "vim.sneak": true,
+
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": true,
+    "markdown": true,
+    "vhdl": false
+  },
+  "liveServer.settings.CustomBrowser": "chrome",
+  "debug.javascript.autoAttachFilter": "disabled",
+  "python.defaultInterpreterPath": "/home/moritz/miniconda3/bin/python",
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "workbench.colorCustomizations": {
+    "[Material Theme Palenight High Contrast]": {
+      "activityBarBadge.background": "#C6FF00",
+      "activityBar.activeBorder": "#C6FF00",
+      "list.activeSelectionForeground": "#C6FF00",
+      "list.inactiveSelectionForeground": "#C6FF00",
+      "list.highlightForeground": "#C6FF00",
+      "scrollbarSlider.activeBackground": "#C6FF0050",
+      "editorSuggestWidget.highlightForeground": "#C6FF00",
+      "textLink.foreground": "#C6FF00",
+      "progressBar.background": "#C6FF00",
+      "pickerGroup.foreground": "#C6FF00",
+      "tab.activeBorder": "#C6FF00",
+      "notificationLink.foreground": "#C6FF00",
+      "editorWidget.resizeBorder": "#C6FF00",
+      "editorWidget.border": "#C6FF00",
+      "settings.modifiedItemIndicator": "#C6FF00",
+      "settings.headerForeground": "#C6FF00",
+      "panelTitle.activeBorder": "#C6FF00",
+      "breadcrumb.activeSelectionForeground": "#C6FF00",
+      "menu.selectionForeground": "#C6FF00",
+      "menubar.selectionForeground": "#C6FF00",
+      "editor.findMatchBorder": "#C6FF00",
+      "selection.background": "#C6FF0040",
+      "statusBarItem.remoteBackground": "#C6FF00",
+      "editorError.background": "#ff00006b"
+    }
+  },
+  "vim.searchHighlightColor": "#C6FF00",
+  "material-icon-theme.folders.theme": "classic",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Material Theme Palenight High Contrast",
+  "materialTheme.accent": "Acid Lime",
+  "indentRainbow.ignoreErrorLanguages": ["*"],
+  "indentRainbow.excludedLanguages": ["python"],
+  "window.zoomLevel": 1,
+  "terminal.integrated.fontFamily": "MesloLGS NF"
+}

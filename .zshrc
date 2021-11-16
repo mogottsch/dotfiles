@@ -25,11 +25,10 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
+# conda/mamba autocompletion
+fpath+=usr/share/zsh/site-functions/_conda
+
 source $ZSH/oh-my-zsh.sh
-
-# source for conda (is this bad practice?)
-# source ~/.bash_profile
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

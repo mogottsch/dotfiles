@@ -62,7 +62,7 @@ bindsym $mod+F2 exec google-chrome-stable --new-window "http://localhost:7777/bl
 bindsym $mod+F3 exec terminal -e ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec terminal -e 'mocp'
-bindsym $mod+F8 exec google-chrome-stable --new-window "https://www.keybr.com/" "https://monkeytype.com/" "https://play.typeracer.com/"
+bindsym $mod+F8 exec google-chrome-stable --new-window "https://typing.io/lessons" "https://monkeytype.com/" "https://play.typeracer.com/"
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
@@ -456,8 +456,8 @@ mode "$mode_gaps_outer" {
 
 
 # Custom
-bindsym Ctrl+Prior exec "mosquitto_pub -h homeassistant.local -t ahk/light/increase -m On -P zBRWCCVtX6vKXQ -u mqtt"
-bindsym Ctrl+Next exec "mosquitto_pub -h homeassistant.local -t ahk/light/decrease -m On -P zBRWCCVtX6vKXQ -u mqtt"
-bindsym $mod+Ctrl+Home exec "picom-trans -c -o 100" 
+bindsym $mod+F12 exec "mosquitto_pub -h homeassistant.local -t ahk/light/increase -m On -P zBRWCCVtX6vKXQ -u mqtt"
+bindsym $mod+F11 exec "mosquitto_pub -h homeassistant.local -t ahk/light/decrease -m On -P zBRWCCVtX6vKXQ -u mqtt"
+bindsym $mod+F10 exec "picom-trans -c -o 100" 
 bindsym Ctrl+Mod1+v exec "copyq toggle" 
 

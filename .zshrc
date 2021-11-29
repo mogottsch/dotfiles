@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Use powerline
 # USE_POWERLINE="true"
 # Source manjaro-zsh-configuration
@@ -14,11 +21,13 @@ HISTFILE=~/.zhistory
 
 ZSH_CUSTOM=/usr/share/zsh
 ZSH=/usr/share/oh-my-zsh/
-ZSH_THEME="robbyrussell"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_MAGIC_FUNCTIONS="true"
 
-plugins=(git history-substring-search zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git history-substring-search zsh-autosuggestions zsh-syntax-highlighting vi-mode)
+
+# enable vi mode
+bindkey -v
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
@@ -45,4 +54,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
 alias config='/usr/bin/git --git-dir=/home/moritz/.cfg/ --work-tree=/home/moritz'
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit /usr/share/zsh/p10k.zsh.
+[[ ! -f /usr/share/zsh/p10k.zsh ]] || source /usr/share/zsh/p10k.zsh

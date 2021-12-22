@@ -1,0 +1,9 @@
+#!/bin/bash
+
+stow_folders_filename='stow_folders'
+
+while read line;
+do
+    stow --restow $line
+done < $stow_folders_filename
+

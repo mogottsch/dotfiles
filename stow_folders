@@ -1,5 +1,6 @@
 i3
 pam
+ssh
 systemd
 vim
 vscode

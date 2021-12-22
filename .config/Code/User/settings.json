@@ -31,14 +31,8 @@
     "editor.defaultFormatter": "ms-python.python",
     "editor.formatOnPaste": false
   },
-  "[nunjucks]": {
-    "editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter"
-  },
   "[blade]": {
     "editor.defaultFormatter": "shufo.vscode-blade-formatter"
-  },
-  "[php]": {
-    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
   "[go]": {
     "editor.defaultFormatter": "golang.go"
@@ -103,12 +97,6 @@
       "after": ["`", "`", "z", "z"]
     }
   ],
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "j"],
-      "after": ["<Esc>"]
-    }
-  ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["p"],
@@ -121,13 +109,12 @@
   // extensions
   "vim.camelCaseMotion.enable": true,
   "vim.easymotion": true,
-  // "vim.statusBarColorControl": true, // too laggy
   "vim.sneak": true,
 
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
     "*": true,
-    "yaml": false,
+    "yaml": true,
     "plaintext": true,
     "markdown": true,
     "vhdl": false
@@ -181,5 +168,12 @@
   "indentRainbow.ignoreErrorLanguages": ["*"],
   "indentRainbow.excludedLanguages": ["python"],
   "window.zoomLevel": 1,
-  "terminal.integrated.fontFamily": "MesloLGS NF"
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "redhat.telemetry.enabled": true,
+  "terminal.integrated.persistentSessionReviveProcess": "never"
 }

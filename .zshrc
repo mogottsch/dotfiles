@@ -5,16 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Use powerline
-# USE_POWERLINE="true"
-# Source manjaro-zsh-configuration
-# if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
-#   source /usr/share/zsh/manjaro-zsh-config
-# fi
-# Use manjaro zsh prompt
-# if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
-#   source /usr/share/zsh/manjaro-zsh-prompt
-# fi
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zhistory
@@ -24,10 +14,13 @@ ZSH=/usr/share/oh-my-zsh/
 DISABLE_AUTO_UPDATE="true"
 DISABLE_MAGIC_FUNCTIONS="true"
 
-plugins=(git history-substring-search zsh-autosuggestions zsh-syntax-highlighting vi-mode)
-
-# enable vi mode
-bindkey -v
+plugins=(
+    git 
+    history-substring-search 
+    zsh-autosuggestions 
+    zsh-syntax-highlighting 
+    zsh-vi-mode
+)
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
@@ -58,5 +51,5 @@ unset __conda_setup
 alias config='/usr/bin/git --git-dir=/home/moritz/.cfg/ --work-tree=/home/moritz'
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
-# To customize prompt, run `p10k configure` or edit /usr/share/zsh/p10k.zsh.
-[[ ! -f /usr/share/zsh/p10k.zsh ]] || source /usr/share/zsh/p10k.zsh
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

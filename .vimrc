@@ -36,6 +36,7 @@ Plugin 'bkad/CamelCaseMotion'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'machakann/vim-highlightedyank'
+Plugin 'dhruvasagar/vim-table-mode'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -203,9 +204,6 @@ map Y y$
 " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
-" Leave insert mode
-inoremap jj <Esc>
-
 " Keep it centered
 nnoremap n nzzzv
 nnoremap N Nzzzv
@@ -213,10 +211,10 @@ nnoremap J mzJ`z
 
 " Undo break marks
 " not working in vscode
-" inoremap , ,<C-g>u
-" inoremap . .<c-g>u
-" inoremap ! !<c-g>u
-" inoremap ? ?<c-g>u
+inoremap , ,<C-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
 
 " move lines from any mode
 inoremap <C-j> <esc>:m .+1<CR>==i

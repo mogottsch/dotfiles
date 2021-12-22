@@ -1,6 +1,12 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
   {
+    // improve vim escape to be more "aggressive"
+    "key": "escape",
+    "command": "extension.vim_escape",
+    "when": "editorTextFocus && !inDebugRepl"
+  },
+  {
     "key": "ctrl+shift+down",
     "command": "editor.emmet.action.matchTag"
   },
@@ -394,5 +400,14 @@
   {
     "key": "ctrl+a",
     "command": "-editor.action.selectAll"
+  },
+  {
+    "key": "ctrl+x",
+    "command": "editor.action.clipboardCutAction",
+    "when": "!vim.active"
+  },
+  {
+    "key": "ctrl+x",
+    "command": "-editor.action.clipboardCutAction"
   }
 ]

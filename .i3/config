@@ -61,7 +61,7 @@ bindsym $mod+F2 exec google-chrome-stable --new-window "http://localhost:7777/bl
 # bindsym $mod+F3 exec pcmanfm
 bindsym $mod+F3 exec terminal -e ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F5 exec terminal -e 'mocp'
+bindsym $mod+F5 exec 'spotify'
 bindsym $mod+F8 exec google-chrome-stable --new-window "https://typing.io/lessons" "https://monkeytype.com/" "https://play.typeracer.com/"
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
@@ -79,8 +79,8 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # change focus
 bindsym $mod+j focus left
-bindsym $mod+k focus down
 bindsym $mod+l focus up
+bindsym $mod+k focus down
 bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:

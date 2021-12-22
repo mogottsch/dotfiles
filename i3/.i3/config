@@ -320,6 +320,7 @@ exec --no-startup-id insync start
 exec --no-startup-id xrandr --output DP-4 --scale 0.5x0.5
 exec --no-startup-id udiskie
 exec --no-startup-id nginx -c /home/moritz/dev/privat/static-server/nginx.conf -p /home/moritz/dev/privat/static-server
+exec --no-startup-id ssh-add
 
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor

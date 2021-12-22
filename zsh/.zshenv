@@ -14,3 +14,5 @@ export PATH=$PATH:$ANDROID_SDK_ROOT/tools/
 
 export JAVA_HOME='/usr/lib/jvm/java-8-openjdk'
 export PATH=$JAVA_HOME/bin:$PATH 
+
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"

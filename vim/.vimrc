@@ -37,6 +37,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

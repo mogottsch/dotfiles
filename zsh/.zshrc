@@ -18,6 +18,7 @@ DISABLE_MAGIC_FUNCTIONS="true"
 bindkey '^H' backward-kill-word
 
 
+
 plugins=(
     git 
     history-substring-search 
@@ -36,13 +37,14 @@ fpath+=usr/share/zsh/site-functions/_conda
 
 source $ZSH/oh-my-zsh.sh
 
-function init_fzf() {
+function init_keybindings() {
+    bindkey -s ^F "tmux-sessionizer\n"
     [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
     [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
 }
 
 # init fzf after zsh-vi-mode to fix conflicting keybindings
-zvm_after_init_commands+=(init_fzf)
+zvm_after_init_commands+=(init_keybindings)
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

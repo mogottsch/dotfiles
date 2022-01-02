@@ -229,6 +229,10 @@ nnoremap <leader>k :m .-2<CR>==
 noremap! <C-BS> <C-w>
 noremap! <C-h> <C-w>
 
+nnoremap <leader>x :silent !chmod +x %<CR>
+
+nnoremap <silent> <C-f> :silent !tmux neww tmux-sessionizer<CR>
+
 "------------------------------------------------------------
 :set number relativenumber
 

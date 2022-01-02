@@ -1,8 +1,10 @@
+bin
 i3
 pam
 ranger
 ssh
 systemd
+tmux
 vim
 vscode
 xresources

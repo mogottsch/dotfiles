@@ -462,3 +462,4 @@ bindsym $mod+F11 exec "mosquitto_pub -h homeassistant.local -t ahk/light/decreas
 bindsym $mod+F10 exec "picom-trans -c -o 100" 
 bindsym Ctrl+Mod1+v exec "copyq toggle" 
 
+bindsym $mod+F9 exec "urxvt -e tmux-chtsh"

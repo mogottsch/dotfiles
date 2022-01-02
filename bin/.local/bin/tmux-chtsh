@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+selected=$( cat ~/.tmux-cht-core-utils ~/.tmux-cht-languages | fzf )
+
+read -p "Enter query: " query
+
+if cat ~/.tmux-cht-languages | grep -qs $selected; then
+    query=`echo $query | tr ' ' '+'`
+    echo \"curl cht.sh/$selected/$query/\" & curl cht.sh/$selected/$query & while [ : ]; do sleep 1; done
+else
+    curl -s cht.sh/$selected~$query | less
+fi
+

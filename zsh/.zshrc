@@ -17,7 +17,7 @@ DISABLE_MAGIC_FUNCTIONS="true"
 # ctrl backspace delete word 
 bindkey '^H' backward-kill-word
 
-
+export TERMINFO_DIRS=/lib/terminfo
 
 plugins=(
     git 

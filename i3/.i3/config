@@ -313,7 +313,7 @@ exec --no-startup-id start_conky_maia
 exec --no-startup-id picom --config /home/moritz/.config/picum.conf -b
 exec --no-startup-id flameshot
 # exec "setxkbmap -model pc104 -layout us,de -variant ,, -option grp:shifts_toggle ctrl:swapcaps grp_led:scroll"
-exec "setxkbmap -model pc104 -layout us,de -variant altgr-intl,, -option grp:shifts_toggle grp_led:scroll nodeadkeys"
+exec --no-startup-id "setxkbmap -model pc104 -layout us,de -variant altgr-intl,, -option grp:shifts_toggle grp_led:scroll nodeadkeys"
 # exec_always --no-startup-id xmodmap -e "keycode 62 = BackSpace" 
 exec --no-startup-id redshift-gtk
 exec --no-startup-id insync start

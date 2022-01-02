@@ -14,6 +14,10 @@ ZSH=/usr/share/oh-my-zsh/
 DISABLE_AUTO_UPDATE="true"
 DISABLE_MAGIC_FUNCTIONS="true"
 
+# ctrl backspace delete word 
+bindkey '^H' backward-kill-word
+
+
 plugins=(
     git 
     history-substring-search 
@@ -31,6 +35,14 @@ fi
 fpath+=usr/share/zsh/site-functions/_conda
 
 source $ZSH/oh-my-zsh.sh
+
+function init_fzf() {
+    [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+    [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+}
+
+# init fzf after zsh-vi-mode to fix conflicting keybindings
+zvm_after_init_commands+=(init_fzf)
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -54,3 +66,4 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+

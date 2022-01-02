@@ -225,6 +225,10 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
 
+" Map Ctrl-Backspace to delete the previous word in insert mode.
+noremap! <C-BS> <C-w>
+noremap! <C-h> <C-w>
+
 "------------------------------------------------------------
 :set number relativenumber
 
@@ -236,9 +240,6 @@ nnoremap <leader>k :m .-2<CR>==
 
 " plugin configuration
 let g:camelcasemotion_key = '<leader>'
-
-" markdown-preview
-
 
 " set to 1, nvim will open the preview window after entering the markdown buffer
 let g:mkdp_auto_start = 1

@@ -32,11 +32,17 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'tpope/vim-fugitive'
 Plug 'francoiscabrol/ranger.vim' " <Leader>f
+Plug 'sbdchd/neoformat'
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/nvim-lsp-installer'
+Plug 'morhetz/gruvbox'
 
+" Telescope 
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+
 
 " Initialize plugin system
 call plug#end()
@@ -45,6 +51,17 @@ call plug#end()
 "------------------------------------------------------------
 let g:camelcasemotion_key = '<leader>'
 let g:highlightedyank_highlight_duration = 200
+
+" auto-format on save
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * Neoformat
+augroup END
+
+" Appearance
+"------------------------------------------------------------
+let g:gruvbox_italic=1
+autocmd vimenter * ++nested colorscheme gruvbox
 
 "------------------------------------------------------------
 " Usability options
@@ -111,4 +128,7 @@ nnoremap <leader>x :silent !chmod +x %<CR>
 
 " Open sessionizer
 nnoremap <silent> <C-f> :silent !tmux neww tmux-sessionizer<CR>
+
+command PI PlugInstall
+
 

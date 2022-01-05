@@ -38,6 +38,7 @@ Plugin 'iamcco/markdown-preview.nvim'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'tpope/vim-fugitive'
+Plugin 'francoiscabrol/ranger.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -249,3 +250,6 @@ let g:camelcasemotion_key = '<leader>'
 let g:mkdp_auto_start = 1
 " set highlight to 1000 ms
 let g:highlightedyank_highlight_duration = 200
+
+
+set nowrap

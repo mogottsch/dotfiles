@@ -14,7 +14,11 @@ set number relativenumber
 :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 :augroup END
 
+" Show max char bar to the right
 set colorcolumn=80
+
+" Always show column to the left (for lsp & stuff)
+set signcolumn=yes
 
 " Plugins
 "------------------------------------------------------------
@@ -36,6 +40,8 @@ Plug 'sbdchd/neoformat'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'morhetz/gruvbox'
+Plug 'ThePrimeagen/git-worktree.nvim'
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 " Telescope 
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
@@ -51,6 +57,9 @@ call plug#end()
 "------------------------------------------------------------
 let g:camelcasemotion_key = '<leader>'
 let g:highlightedyank_highlight_duration = 200
+
+let g:ranger_map_keys = 0
+
 
 " auto-format on save
 augroup fmt
@@ -129,6 +138,7 @@ nnoremap <leader>x :silent !chmod +x %<CR>
 " Open sessionizer
 nnoremap <silent> <C-f> :silent !tmux neww tmux-sessionizer<CR>
 
+" Open ranger
+map <leader>r :Ranger<CR>
+
 command PI PlugInstall
-
-

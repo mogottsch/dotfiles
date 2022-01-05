@@ -36,4 +36,5 @@ tar
 tldr
 tr
 uniq
+wc
 xargs

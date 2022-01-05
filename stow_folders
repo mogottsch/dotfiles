@@ -1,5 +1,6 @@
 bin
 i3
+nvim
 pam
 ranger
 ssh

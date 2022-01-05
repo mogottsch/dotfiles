@@ -461,5 +461,7 @@ bindsym $mod+F12 exec "mosquitto_pub -h homeassistant.local -t ahk/light/increas
 bindsym $mod+F11 exec "mosquitto_pub -h homeassistant.local -t ahk/light/decrease -m On -P zBRWCCVtX6vKXQ -u mqtt"
 bindsym $mod+F10 exec "picom-trans -c -o 100" 
 bindsym Ctrl+Mod1+v exec "copyq toggle" 
-
 bindsym $mod+F9 exec "urxvt -e tmux-chtsh"
+
+# disable swapping between workspaces when repeating mod + #
+workspace_auto_back_and_forth no

@@ -37,6 +37,9 @@ fpath+=usr/share/zsh/site-functions/_conda
 
 source $ZSH/oh-my-zsh.sh
 
+# autocomplete hidden files
+_comp_options+=(globdots)
+
 function init_keybindings() {
     bindkey -s ^F "tmux-sessionizer\n"
     [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh

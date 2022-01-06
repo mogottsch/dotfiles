@@ -30,7 +30,7 @@ Plug 'junegunn/vim-easy-align'
 " Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-capslock' " <C-G>c Insert | gC Normal 
+Plug 'tpope/vim-capslock' " <C-G>c Insert | gC Normal
 Plug 'bkad/CamelCaseMotion'
 Plug 'easymotion/vim-easymotion'
 Plug 'iamcco/markdown-preview.nvim'
@@ -48,7 +48,7 @@ Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
 Plug 'edkolev/tmuxline.vim'
 
-" Telescope 
+" Telescope
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-lua/plenary.nvim'
@@ -83,6 +83,15 @@ colorscheme gruvbox-material
 
 let g:airline_theme = 'gruvbox_material'
 let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+let g:airline_symbols.crypt = ''
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.whitespace = ''
+
 
 "------------------------------------------------------------
 " Usability options

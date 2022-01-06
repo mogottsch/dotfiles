@@ -3,7 +3,9 @@
 set noswapfile
 set nobackup
 
-set termguicolors
+if has('termguicolors')
+  set termguicolors
+endif
 
 " Display relative line numbers on the left
 set number relativenumber
@@ -42,13 +44,15 @@ Plug 'williamboman/nvim-lsp-installer'
 Plug 'morhetz/gruvbox'
 Plug 'ThePrimeagen/git-worktree.nvim'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+Plug 'sainnhe/gruvbox-material'
+Plug 'vim-airline/vim-airline'
+Plug 'edkolev/tmuxline.vim'
 
 " Telescope 
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-
 
 " Initialize plugin system
 call plug#end()
@@ -69,8 +73,16 @@ augroup END
 
 " Appearance
 "------------------------------------------------------------
-let g:gruvbox_italic=1
-autocmd vimenter * ++nested colorscheme gruvbox
+" let g:gruvbox_italic=1
+" autocmd vimenter * ++nested colorscheme gruvbox
+
+set background=dark
+" Available values: 'hard', 'medium'(default), 'soft'
+let g:gruvbox_material_background = 'soft'
+colorscheme gruvbox-material
+
+let g:airline_theme = 'gruvbox_material'
+let g:airline_powerline_fonts = 1
 
 "------------------------------------------------------------
 " Usability options

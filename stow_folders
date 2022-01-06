@@ -3,6 +3,7 @@ i3
 nvim
 pam
 ranger
+rofi
 ssh
 systemd
 tmux

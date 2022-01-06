@@ -1,0 +1,7 @@
+configuration {
+	font: "mono 23";
+	/* show-icons: true; */
+	combi-modi: "run,ssh";
+	matching: "fuzzy";
+}
+@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"

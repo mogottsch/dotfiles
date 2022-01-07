@@ -47,6 +47,17 @@ Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline'
 Plug 'edkolev/tmuxline.vim'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'github/copilot.vim'
+
+" Completion
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/cmp-nvim-lua' " nvim specific lua
+Plug 'hrsh7th/nvim-cmp'
+Plug 'saadparwaiz1/cmp_luasnip'
 
 " Telescope
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
@@ -65,11 +76,15 @@ let g:highlightedyank_highlight_duration = 200
 let g:ranger_map_keys = 0
 
 
+imap <silent><script><expr> <C-l> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+
 " auto-format on save
 augroup fmt
   autocmd!
   autocmd BufWritePre * Neoformat
 augroup END
+
 
 " Appearance
 "------------------------------------------------------------
@@ -97,7 +112,6 @@ let g:airline_symbols.whitespace = ''
 " Usability options
 set clipboard=unnamedplus
 
-
 set incsearch
 set ignorecase
 set smartcase
@@ -115,6 +129,12 @@ set scrolloff=8
 
 " More space for messages
 set cmdheight=2
+
+" Return to last edit position when opening files
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
 
 "------------------------------------------------------------
 " Indentation options

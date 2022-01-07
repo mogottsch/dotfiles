@@ -10,3 +10,4 @@
   - vim-easy-align
   - vim-airline
   - nerdtree
+- ignore pages for firenvim

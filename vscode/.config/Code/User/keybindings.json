@@ -2,9 +2,10 @@
 [
   {
     // improve vim escape to be more "aggressive"
+    // vim.mode != normal fixes esc not working in jupyter notebooks
     "key": "escape",
     "command": "extension.vim_escape",
-    "when": "editorTextFocus && !inDebugRepl"
+    "when": "editorTextFocus && !inDebugRepl && vim.mode != 'Normal'"
   },
   {
     "key": "ctrl+shift+down",
@@ -191,7 +192,7 @@
     "command": "github.copilot.autocompleteAccepted"
   },
   {
-    "key": "ctrl+;",
+    "key": "ctrl+l",
     "command": "editor.action.inlineSuggest.commit"
   },
   {
@@ -247,7 +248,7 @@
     "when": "focusedView != ''"
   },
   {
-    "key": "ctrl+;",
+    "key": "ctrl+l",
     "command": "acceptSelectedSuggestion",
     "when": "acceptSuggestionOnEnter && suggestWidgetVisible && suggestionMakesTextEdit && textInputFocus"
   },
@@ -409,5 +410,15 @@
   {
     "key": "ctrl+x",
     "command": "-editor.action.clipboardCutAction"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-expandLineSelection",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "-notebook.centerActiveCell",
+    "when": "notebookEditorFocused"
   }
 ]

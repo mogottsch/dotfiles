@@ -1,7 +1,12 @@
 local actions = require('telescope.actions')
+local previewers = require("telescope.previewers")
 
 require('telescope').setup {
-    defaults = {mappings = {i = {['<C-q>'] = actions.send_to_qflist}}}
+    defaults = {
+        file_previewer = previewers.vim_buffer_cat.new,
+        grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
+        mappings = {i = {['<C-q>'] = actions.send_to_qflist}}
+    }
 }
 
 require('telescope').load_extension('fzf')

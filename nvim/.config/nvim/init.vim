@@ -75,8 +75,6 @@ let g:highlightedyank_highlight_duration = 200
 
 let g:ranger_map_keys = 0
 
-
-imap <silent><script><expr> <C-l> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
 
 " auto-format on save
@@ -179,7 +177,16 @@ nnoremap <leader>x :silent !chmod +x %<CR>
 " Open sessionizer
 nnoremap <silent> <C-f> :silent !tmux neww tmux-sessionizer<CR>
 
-" Open ranger
+noremap <C-s> :update<CR>
+inoremap <C-s> <C-o>:update<CR>
+
+nnoremap <leader>pv :Ex<CR>
+
+
+"Plugin mappings
 map <leader>r :Ranger<CR>
+imap <silent><script><expr> <C-l> copilot#Accept("\<CR>")
+nmap <leader>mt <Plug>MarkdownPreviewToggle
 
 command PI PlugInstall
+

@@ -1,6 +1,5 @@
 ## Todo
 
-- setup auto-completion & snippets
 - understand quick fix lists
 - understand vim fugitive
 - setup hotkey for markdown preview

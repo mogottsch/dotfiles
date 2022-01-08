@@ -49,6 +49,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'edkolev/tmuxline.vim'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'github/copilot.vim'
+Plug 'airblade/vim-gitgutter'
 
 " Completion
 Plug 'hrsh7th/cmp-nvim-lsp'

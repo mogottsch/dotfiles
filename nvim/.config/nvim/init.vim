@@ -180,8 +180,15 @@ nnoremap <silent> <C-f> :silent !tmux neww tmux-sessionizer<CR>
 noremap <C-s> :update<CR>
 inoremap <C-s> <C-o>:update<CR>
 
+"Open file explorer
 nnoremap <leader>pv :Ex<CR>
 
+nnoremap <C-j> :cnext<CR>
+nnoremap <C-k> :cprev<CR>
+
+" whole buffer
+nnoremap yie ggyG``
+nnoremap die ggdG
 
 "Plugin mappings
 map <leader>r :Ranger<CR>

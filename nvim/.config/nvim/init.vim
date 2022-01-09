@@ -50,6 +50,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'github/copilot.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'ThePrimeagen/harpoon'
 
 " Completion
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -134,6 +135,9 @@ autocmd BufReadPost *
      \ if line("'\"") > 0 && line("'\"") <= line("$") |
      \   exe "normal! g`\"" |
      \ endif
+
+" Delay e.g. for vim-gitgutter
+set updatetime=100
 
 "------------------------------------------------------------
 " Indentation options

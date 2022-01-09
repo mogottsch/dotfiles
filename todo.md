@@ -1,7 +1,5 @@
 ## Todo
 
-- understand quick fix lists
-- understand vim fugitive
 - setup hotkey for markdown preview
 - take a look at:
   - treesitter
@@ -9,4 +7,5 @@
   - vim-easy-align
   - vim-airline
   - nerdtree
+  - harpoon
 - ignore pages for firenvim

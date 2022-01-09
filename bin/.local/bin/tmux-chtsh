@@ -1,6 +1,9 @@
 #!/usr/bin/bash
 
-selected=$( cat ~/.tmux-cht-core-utils ~/.tmux-cht-languages | fzf )
+binaries=$(ls /usr/bin | xargs | tr ' ' '\n')
+languages=$(cat ~/.tmux-cht-languages)
+all=$(echo $languages $binaries)
+selected=$( echo $all | tr ' ' '\n' | fzf )
 
 read -p "Enter query: " query
 

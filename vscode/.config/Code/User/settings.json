@@ -163,7 +163,7 @@
   "vim.searchHighlightColor": "#C6FF00",
   "material-icon-theme.folders.theme": "classic",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Material Theme Palenight High Contrast",
+  "workbench.colorTheme": "Gruvbox Dark Soft",
   "materialTheme.accent": "Acid Lime",
   "indentRainbow.ignoreErrorLanguages": ["*"],
   "indentRainbow.excludedLanguages": ["python"],

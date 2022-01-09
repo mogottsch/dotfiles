@@ -182,7 +182,7 @@ nnoremap <leader>x :silent !chmod +x %<CR>
 " Open sessionizer
 nnoremap <silent> <C-f> :silent !tmux neww tmux-sessionizer<CR>
 
-noremap <C-s> :update<CR>
+" noremap <C-s> :update<CR>
 inoremap <C-s> <C-o>:update<CR>
 
 "Open file explorer
@@ -199,6 +199,9 @@ nnoremap die ggdG
 map <leader>r :Ranger<CR>
 imap <silent><script><expr> <C-l> copilot#Accept("\<CR>")
 nmap <leader>mt <Plug>MarkdownPreviewToggle
+
+" Enter normal mode from terminal mode
+tnoremap <Esc> <C-\><C-n>
 
 command PI PlugInstall
 

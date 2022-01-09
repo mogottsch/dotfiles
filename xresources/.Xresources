@@ -27,7 +27,8 @@ URxvt.keysym.Shift-Control-Down:  \033[1;6B
 URxvt*scrollBar_right:            false
 URxvt.keysym.Shift-Up:            command:\033]720;3\007
 URxvt.keysym.Shift-Down:          command:\033]721;3\007
-Rxvt.perl-ext-common:             resize-font,selection-to-clipboard
+URxvt.perl-ext-common:            resize-font,selection-to-clipboard,-searchable-scrollback
+URxvt.searchable-scrollback: Meta-Shift-S
 
 ! Copy & Paste
 URxvt.iso14755:                   false

@@ -320,8 +320,6 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id copyq
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
 # exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id picom --config /home/moritz/.config/picum.conf -b
 exec --no-startup-id flameshot
@@ -332,6 +330,10 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id insync start
 exec --no-startup-id xrandr --output DP-4 --scale 0.5x0.5
 exec --no-startup-id udiskie
+
+# Use new random pragmatic tip and insert into conky config
+exec --no-startup-id new_pragmatic_tip
+exec --no-startup-id conky -c ~/.config/conky.conf
 
 # run static-server that serves a dark mode blank html page for chrome
 exec --no-startup-id nginx -c /home/moritz/dev/privat/static-server/nginx.conf -p /home/moritz/dev/privat/static-server

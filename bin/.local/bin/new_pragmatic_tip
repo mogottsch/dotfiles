@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+pragmatic_tips=~/Notes/dev/pragmatic_tips
+pragmatic_tip=$(shuf --head-count=1 $pragmatic_tips)
+line_number=$(grep -n "$pragmatic_tip" $pragmatic_tips | cut -d: -f1)
+
+conky_line="\$\{voffset 5\}\$\{color2\}\$\{font Bitstream Vera Sans:size=16\}\
+\$\{alignr\}\\\#$line_number \$\{color\} $pragmatic_tip"
+
+conky_path=~/dotfiles/conky/.config/conky.conf
+
+sed -i "/# START:PRAGMATIC_TIPS/{n;s/.*/$conky_line/}" $conky_path
+

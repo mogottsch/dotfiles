@@ -10,6 +10,6 @@ systemd
 tmux
 vim
 vscode
-xresources
+x11
 zathura
 zsh

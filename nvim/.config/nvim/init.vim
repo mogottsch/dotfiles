@@ -200,6 +200,10 @@ map <leader>r :Ranger<CR>
 imap <silent><script><expr> <C-l> copilot#Accept("\<CR>")
 nmap <leader>mt <Plug>MarkdownPreviewToggle
 
+" vim easly align
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
 " Enter normal mode from terminal mode
 tnoremap <Esc> <C-\><C-n>
 

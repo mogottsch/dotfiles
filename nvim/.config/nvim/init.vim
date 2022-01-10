@@ -85,6 +85,11 @@ augroup fmt
   autocmd BufWritePre * Neoformat
 augroup END
 
+augroup vairline
+    autocmd FileType * unlet! g:airline#extensions#whitespace#checks
+    autocmd FileType markdown let g:airline#extensions#whitespace#checks = [ 'indent' ]
+augroup END
+
 
 " Appearance
 "------------------------------------------------------------
@@ -198,7 +203,7 @@ nnoremap die ggdG
 "Plugin mappings
 map <leader>r :Ranger<CR>
 imap <silent><script><expr> <C-l> copilot#Accept("\<CR>")
-nmap <leader>mt <Plug>MarkdownPreviewToggle
+nmap <leader>mp <Plug>MarkdownPreviewToggle
 
 " vim easly align
 xmap ga <Plug>(EasyAlign)

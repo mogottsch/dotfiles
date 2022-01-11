@@ -91,6 +91,7 @@ augroup vairline
 augroup END
 
 
+
 " Appearance
 "------------------------------------------------------------
 " let g:gruvbox_italic=1
@@ -112,6 +113,8 @@ let g:airline_symbols.crypt = ''
 let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.whitespace = ''
 
+" Fix weird appearance of easymotion targets 
+hi link EasyMotionTarget ErrorMsg
 
 "------------------------------------------------------------
 " Usability options
@@ -187,7 +190,7 @@ nnoremap <leader>x :silent !chmod +x %<CR>
 " Open sessionizer
 nnoremap <silent> <C-f> :silent !tmux neww tmux-sessionizer<CR>
 
-" noremap <C-s> :update<CR>
+noremap <C-s> :update<CR>
 inoremap <C-s> <C-o>:update<CR>
 
 "Open file explorer
@@ -211,6 +214,8 @@ nmap ga <Plug>(EasyAlign)
 
 " Enter normal mode from terminal mode
 tnoremap <Esc> <C-\><C-n>
+
+xnoremap p pgvy
 
 command PI PlugInstall
 

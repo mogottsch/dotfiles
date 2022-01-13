@@ -51,6 +51,7 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'github/copilot.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'ThePrimeagen/harpoon'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Completion
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -94,13 +95,9 @@ augroup END
 
 " Appearance
 "------------------------------------------------------------
-" let g:gruvbox_italic=1
-" autocmd vimenter * ++nested colorscheme gruvbox
-
-set background=dark
-" Available values: 'hard', 'medium'(default), 'soft'
-let g:gruvbox_material_background = 'soft'
-colorscheme gruvbox-material
+let g:gruvbox_italic=1
+let g:gruvbox_contrast_dark = 'soft'
+autocmd vimenter * ++nested colorscheme gruvbox
 
 let g:airline_theme = 'gruvbox_material'
 let g:airline_powerline_fonts = 1

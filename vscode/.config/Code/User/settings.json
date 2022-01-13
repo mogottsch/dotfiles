@@ -166,8 +166,9 @@
   "workbench.colorTheme": "Gruvbox Dark Soft",
   "materialTheme.accent": "Acid Lime",
   "indentRainbow.ignoreErrorLanguages": ["*"],
-  "indentRainbow.excludedLanguages": ["python"],
-  "window.zoomLevel": 3,
+  "indentRainbow.excludedLanguages": [
+    "python"
+  ],
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "[cpp]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
@@ -176,5 +177,8 @@
   "editor.guides.bracketPairs": "active",
   "redhat.telemetry.enabled": true,
   "terminal.integrated.persistentSessionReviveProcess": "never",
-  "editor.rulers": [80]
+  "editor.rulers": [
+    80
+  ],
+  "window.zoomLevel": -1
 }

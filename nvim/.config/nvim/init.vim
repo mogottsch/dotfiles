@@ -29,7 +29,8 @@ call plug#begin()
 Plug 'junegunn/vim-easy-align'
 " Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
+" Plug 'tpope/vim-commentary'
+Plug 'numToStr/Comment.nvim'
 Plug 'tpope/vim-capslock' " <C-G>c Insert | gC Normal
 Plug 'bkad/CamelCaseMotion'
 Plug 'easymotion/vim-easymotion'
@@ -37,7 +38,7 @@ Plug 'iamcco/markdown-preview.nvim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'tpope/vim-fugitive'
-Plug 'francoiscabrol/ranger.vim' " <Leader>f
+Plug 'francoiscabrol/ranger.vim' " <Leader>r
 Plug 'sbdchd/neoformat'
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
@@ -52,6 +53,8 @@ Plug 'github/copilot.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'ThePrimeagen/harpoon'
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-eunuch'
 
 " Completion
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -91,7 +94,17 @@ augroup vairline
     autocmd FileType markdown let g:airline#extensions#whitespace#checks = [ 'indent' ]
 augroup END
 
+set diffopt+=vertical
+nmap <leader>gs :Ge :<CR>
+nmap <leader>gj :diffget //3<CR>
+nmap <leader>gf :diffget //2<CR>
 
+" augroup easymotion
+"     autocmd User EasyMotionPromptBegin silent! LspStop
+"     autocmd User EasyMotionPromptEnd silent! LspStart
+" augroup END
+
+let g:airline_section_z = "%p%%"
 
 " Appearance
 "------------------------------------------------------------

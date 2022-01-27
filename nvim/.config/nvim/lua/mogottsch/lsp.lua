@@ -8,6 +8,7 @@ end
 local custom_attach = function()
     print("LSP started.");
 
+    map('n', 'g?', '<cmd>lua vim.diagnostic.open_float()<CR>');
     map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
     map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
     map('n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>')

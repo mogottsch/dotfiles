@@ -65,6 +65,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
+source /usr/share/nvm/init-nvm.sh
 alias config='/usr/bin/git --git-dir=/home/moritz/.cfg/ --work-tree=/home/moritz'
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 

@@ -65,7 +65,14 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
+if [ -s "$HOME/.nvm/nvm.sh" ]; then
+  export NVM_DIR="$HOME/.nvm"
+  nvm_cmds=(nvm node npm yarn)
+  for cmd in $nvm_cmds ; do
+    alias $cmd="unalias $nvm_cmds && unset nvm_cmds && . $NVM_DIR/nvm.sh && $cmd"
+  done
+fi
 alias config='/usr/bin/git --git-dir=/home/moritz/.cfg/ --work-tree=/home/moritz'
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 

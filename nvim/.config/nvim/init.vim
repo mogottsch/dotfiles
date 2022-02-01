@@ -55,6 +55,7 @@ Plug 'ThePrimeagen/harpoon'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-eunuch'
+Plug 'NTBBloodbath/rest.nvim'
 
 " Completion
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -221,6 +222,9 @@ nmap <leader>mp <Plug>MarkdownPreviewToggle
 " vim easly align
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+
+" rest.nvim
+nmap <leader><leader>r <Plug>RestNvim
 
 " Enter normal mode from terminal mode
 tnoremap <Esc> <C-\><C-n>

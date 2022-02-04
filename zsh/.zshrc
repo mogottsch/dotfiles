@@ -76,6 +76,10 @@ fi
 alias config='/usr/bin/git --git-dir=/home/moritz/.cfg/ --work-tree=/home/moritz'
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
+precmd() {
+    pwd > "/tmp/cwd"
+}
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

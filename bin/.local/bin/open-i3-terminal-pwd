@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+CWD=$(cat /tmp/cwd)
+i3-sensible-terminal -cd "$CWD"

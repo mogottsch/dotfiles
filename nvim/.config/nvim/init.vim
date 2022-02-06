@@ -56,6 +56,8 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-eunuch'
 Plug 'NTBBloodbath/rest.nvim'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'wellle/targets.vim'
 
 " Completion
 Plug 'hrsh7th/cmp-nvim-lsp'

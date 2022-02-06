@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+CWD=$(cat /tmp/cwd)
+ranger "$CWD"

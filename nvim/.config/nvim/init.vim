@@ -59,6 +59,10 @@ Plug 'NTBBloodbath/rest.nvim'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'wellle/targets.vim'
 
+Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
+" Plug 'Pocco81/DAPInstall.nvim'
+
 " Completion
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'

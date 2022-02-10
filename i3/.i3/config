@@ -325,7 +325,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id flameshot
 # exec "setxkbmap -model pc104 -layout us,de -variant ,, -option grp:shifts_toggle ctrl:swapcaps grp_led:scroll"
 # exec --no-startup-id "setxkbmap -model pc104 -layout us,de -variant altgr-intl,, -option grp:shifts_toggle grp_led:scroll nodeadkeys"
-exec --no-startup-id "setxkbmap -model pc104 -layout us -variant altgr-intl,, -option nodeadkeys ctrl:nocaps shift:both_capslock"
+exec --no-startup-id "setxkbmap -model pc104 -layout us,de -variant altgr-intl,, -option grp:shifts_toggle grp_led:scroll nodeadkeys"
 exec --no-startup-id redshift-gtk
 exec --no-startup-id insync start
 exec --no-startup-id xrandr --output DP-4 --scale 0.5x0.5

@@ -37,20 +37,17 @@ call plug#begin()
   Plug 'iamcco/markdown-preview.nvim'
   Plug 'machakann/vim-highlightedyank'
   Plug 'dhruvasagar/vim-table-mode'
-  Plug 'tpope/vim-fugitive'
   Plug 'francoiscabrol/ranger.vim' " <Leader>r
   Plug 'sbdchd/neoformat'
   Plug 'neovim/nvim-lspconfig'
   Plug 'williamboman/nvim-lsp-installer'
   Plug 'morhetz/gruvbox'
-  Plug 'ThePrimeagen/git-worktree.nvim'
   Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
   Plug 'sainnhe/gruvbox-material'
   Plug 'vim-airline/vim-airline'
   Plug 'edkolev/tmuxline.vim'
   Plug 'L3MON4D3/LuaSnip'
   Plug 'github/copilot.vim'
-  Plug 'airblade/vim-gitgutter'
   Plug 'ThePrimeagen/harpoon'
   Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'tpope/vim-sleuth'
@@ -58,6 +55,12 @@ call plug#begin()
   Plug 'NTBBloodbath/rest.nvim'
   Plug 'michaeljsmith/vim-indent-object'
   Plug 'wellle/targets.vim'
+
+  " Git
+  Plug 'APZelos/blamer.nvim'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-fugitive'
+  Plug 'ThePrimeagen/git-worktree.nvim'
 
   Plug 'mfussenegger/nvim-dap'
   Plug 'rcarriga/nvim-dap-ui'
@@ -111,6 +114,9 @@ nmap <leader>gf :diffget //2<CR>
 " augroup END
 
 let g:airline_section_z = "%p%%"
+
+let g:blamer_enabled = 1
+let g:blamer_date_format = '%d.%m.%y'
 
 " Appearance
 "------------------------------------------------------------

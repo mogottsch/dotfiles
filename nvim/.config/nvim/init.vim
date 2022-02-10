@@ -26,59 +26,58 @@ set signcolumn=yes
 "------------------------------------------------------------
 call plug#begin()
 
-Plug 'junegunn/vim-easy-align'
-" Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-surround'
-" Plug 'tpope/vim-commentary'
-Plug 'numToStr/Comment.nvim'
-Plug 'tpope/vim-capslock' " <C-G>c Insert | gC Normal
-Plug 'bkad/CamelCaseMotion'
-Plug 'easymotion/vim-easymotion'
-Plug 'iamcco/markdown-preview.nvim'
-Plug 'machakann/vim-highlightedyank'
-Plug 'dhruvasagar/vim-table-mode'
-Plug 'tpope/vim-fugitive'
-Plug 'francoiscabrol/ranger.vim' " <Leader>r
-Plug 'sbdchd/neoformat'
-Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
-Plug 'morhetz/gruvbox'
-Plug 'ThePrimeagen/git-worktree.nvim'
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-Plug 'sainnhe/gruvbox-material'
-Plug 'vim-airline/vim-airline'
-Plug 'edkolev/tmuxline.vim'
-Plug 'L3MON4D3/LuaSnip'
-Plug 'github/copilot.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'ThePrimeagen/harpoon'
-Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'tpope/vim-sleuth'
-Plug 'tpope/vim-eunuch'
-Plug 'NTBBloodbath/rest.nvim'
-Plug 'michaeljsmith/vim-indent-object'
-Plug 'wellle/targets.vim'
+  Plug 'junegunn/vim-easy-align'
+  " Plug 'scrooloose/nerdtree'
+  Plug 'tpope/vim-surround'
+  " Plug 'tpope/vim-commentary'
+  Plug 'numToStr/Comment.nvim'
+  Plug 'tpope/vim-capslock' " <C-G>c Insert | gC Normal
+  Plug 'bkad/CamelCaseMotion'
+  Plug 'easymotion/vim-easymotion'
+  Plug 'iamcco/markdown-preview.nvim'
+  Plug 'machakann/vim-highlightedyank'
+  Plug 'dhruvasagar/vim-table-mode'
+  Plug 'tpope/vim-fugitive'
+  Plug 'francoiscabrol/ranger.vim' " <Leader>r
+  Plug 'sbdchd/neoformat'
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'williamboman/nvim-lsp-installer'
+  Plug 'morhetz/gruvbox'
+  Plug 'ThePrimeagen/git-worktree.nvim'
+  Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+  Plug 'sainnhe/gruvbox-material'
+  Plug 'vim-airline/vim-airline'
+  Plug 'edkolev/tmuxline.vim'
+  Plug 'L3MON4D3/LuaSnip'
+  Plug 'github/copilot.vim'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'ThePrimeagen/harpoon'
+  Plug 'lukas-reineke/indent-blankline.nvim'
+  Plug 'tpope/vim-sleuth'
+  Plug 'tpope/vim-eunuch'
+  Plug 'NTBBloodbath/rest.nvim'
+  Plug 'michaeljsmith/vim-indent-object'
+  Plug 'wellle/targets.vim'
 
-Plug 'mfussenegger/nvim-dap'
-Plug 'rcarriga/nvim-dap-ui'
-" Plug 'Pocco81/DAPInstall.nvim'
+  Plug 'mfussenegger/nvim-dap'
+  Plug 'rcarriga/nvim-dap-ui'
+  " Plug 'Pocco81/DAPInstall.nvim'
 
-" Completion
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/cmp-nvim-lua' " nvim specific lua
-Plug 'hrsh7th/nvim-cmp'
-Plug 'saadparwaiz1/cmp_luasnip'
+  " Completion
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-cmdline'
+  Plug 'hrsh7th/cmp-nvim-lua' " nvim specific lua
+  Plug 'hrsh7th/nvim-cmp'
+  Plug 'saadparwaiz1/cmp_luasnip'
 
-" Telescope
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+  " Telescope
+  Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+  Plug 'nvim-treesitter/nvim-treesitter'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
 
-" Initialize plugin system
 call plug#end()
 
 " Plugin Config

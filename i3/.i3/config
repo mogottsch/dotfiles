@@ -377,33 +377,33 @@ set_from_resource $term_color15    color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-	i3bar_command i3bar
-	status_command i3status
-	position bottom
+        i3bar_command i3bar
+        status_command i3status
+        position bottom
 
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
+        ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+        # tray_output primary
+        # tray_output eDP1
 
-	bindsym button4 nop
-	bindsym button5 nop
+        bindsym button4 nop
+        bindsym button5 nop
         font xft:URWGothic-Book 15
         # font pango:DejaVu Sans Mono 10
-	strip_workspace_numbers yes
+        strip_workspace_numbers yes
 
-    colors {
-        # bar background color
-        background $bg
-        # text color used for blocks that do not have a color specified.
-        statusline $fg
+        colors {
+                # bar background color
+                background $bg
+                # text color used for blocks that do not have a color specified.
+                statusline $fg
 
-        # workspaces section
-        #                    border     backgr.     text
-        focused_workspace    $orange    $orange     $bg
-        inactive_workspace   $bg        $aqua       $bg
-        active_workspace     $bg        $blue       $bg
-        urgent_workspace     $red       $red        $fg
-    }
+                # workspaces section
+                #                    border     backgr.     text
+                focused_workspace    $orange    $orange     $bg
+                inactive_workspace   $bg        $aqua       $bg
+                active_workspace     $bg        $blue       $bg
+                urgent_workspace     $red       $red        $fg
+        }
 }
 
 # hide/unhide i3status bar
@@ -411,13 +411,13 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #556064 #80FFF9 #FDF6E3
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000
+        client.focused          #556064 #556064 #80FFF9 #FDF6E3
+        client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
+        client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
+        client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+        client.placeholder      #000000 #0c0c0c #ffffff #000000
 
-  client.background       #2B2C2B
+        client.background       #2B2C2B
 
 #############################
 ### settings for i3-gaps: ###

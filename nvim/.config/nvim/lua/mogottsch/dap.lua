@@ -17,3 +17,27 @@ dap.configurations.python = {
         pythonPath = function() return '/usr/bin/python' end
     }
 }
+
+dap.adapters.php = {
+    type = 'executable',
+    command = 'node',
+    args = {'/usr/local/vscode-php-debug/out/phpDebug.js'}
+}
+
+dap.configurations.php = {
+    {
+        name = "DOCKER XDEBUG",
+        type = "php",
+        request = "launch",
+        port = 9000,
+        pathMappings = {["/var/www/html"] = "${workspaceFolder}/laravel"},
+        hostname = "172.17.0.1",
+        xdebugSettings = {
+            max_data = 65535,
+            show_hidden = 1,
+            max_children = 100,
+            max_depth = 5
+        }
+    }
+}
+

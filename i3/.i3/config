@@ -325,10 +325,9 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id flameshot
 # exec "setxkbmap -model pc104 -layout us,de -variant ,, -option grp:shifts_toggle ctrl:swapcaps grp_led:scroll"
 # exec --no-startup-id "setxkbmap -model pc104 -layout us,de -variant altgr-intl,, -option grp:shifts_toggle grp_led:scroll nodeadkeys"
-exec --no-startup-id "setxkbmap -model pc104 -layout us,de -variant altgr-intl,, -option grp:shifts_toggle grp_led:scroll nodeadkeys"
+exec --no-startup-id "setxkbmap -model pc104 -layout us,de -variant altgr-intl,, -option grp:shifts_toggle grp_led:scroll nodeadkeys ctrl:nocaps shift:both_capslock"
 exec --no-startup-id redshift-gtk
 exec --no-startup-id insync start
-exec --no-startup-id xrandr --output DP-4 --scale 0.5x0.5
 exec --no-startup-id udiskie
 
 # Use new random pragmatic tip and insert into conky config
@@ -375,6 +374,8 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
+exec --no-startup-id xrandr --output DP-4 --scale 0.75x0.75
+
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
         i3bar_command i3bar
@@ -382,8 +383,9 @@ bar {
         position bottom
 
         ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-        # tray_output primary
-        # tray_output eDP1
+
+        tray_output primary
+        tray_output DP-4
 
         bindsym button4 nop
         bindsym button5 nop

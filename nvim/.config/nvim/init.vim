@@ -27,13 +27,10 @@ set signcolumn=yes
 call plug#begin()
 
   Plug 'junegunn/vim-easy-align'
-  " Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-surround'
-  " Plug 'tpope/vim-commentary'
   Plug 'numToStr/Comment.nvim'
   Plug 'tpope/vim-capslock' " <C-G>c Insert | gC Normal
   Plug 'bkad/CamelCaseMotion'
-  Plug 'easymotion/vim-easymotion'
   Plug 'iamcco/markdown-preview.nvim'
   Plug 'machakann/vim-highlightedyank'
   Plug 'dhruvasagar/vim-table-mode'
@@ -104,14 +101,11 @@ augroup vairline
 augroup END
 
 set diffopt+=vertical
+nmap <leader>G :Ge :<CR>
 nmap <leader>gs :Ge :<CR>
 nmap <leader>gj :diffget //3<CR>
 nmap <leader>gf :diffget //2<CR>
-
-" augroup easymotion
-"     autocmd User EasyMotionPromptBegin silent! LspStop
-"     autocmd User EasyMotionPromptEnd silent! LspStart
-" augroup END
+nmap <leader>gp :G -c push.default=current push<CR>
 
 let g:airline_section_z = "%p%%"
 
@@ -135,8 +129,6 @@ let g:airline_symbols.crypt = ''
 let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.whitespace = ''
 
-" Fix weird appearance of easymotion targets 
-hi link EasyMotionTarget ErrorMsg
 
 "------------------------------------------------------------
 " Usability options

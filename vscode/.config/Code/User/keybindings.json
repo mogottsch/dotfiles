@@ -420,5 +420,23 @@
     "key": "ctrl+l",
     "command": "-notebook.centerActiveCell",
     "when": "notebookEditorFocused"
+  },
+  {
+    "key": "alt+a",
+    "command": "workbench.action.openEditorAtIndex1"
+  },
+  {
+    "key": "alt+s",
+    "command": "workbench.action.openEditorAtIndex2"
+  },
+  {
+    "key": "alt+s",
+    "command": "-gitlens.showQuickRepoStatus",
+    "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+  },
+  {
+    "key": "alt+a",
+    "command": "-yo1dog.cursor-align.alignCursors",
+    "when": "editorTextFocus"
   }
 ]

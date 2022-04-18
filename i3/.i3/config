@@ -75,8 +75,10 @@ bindsym $mod+F2 exec google-chrome-stable --new-window "http://localhost:7777/bl
 # bindsym $mod+F3 exec pcmanfm
 bindsym $mod+F3 exec terminal -e open-ranger-pwd
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F5 exec 'spotify'
+bindsym $mod+F7 exec google-chrome-stable --new-window "https://clockify.me/tracker" "https://gitlab.zendri.com/uep/platform" "https://projects.zendri.zone/projects/jsd-bb-umsetzung/"; \
+                exec google-chrome-stable --new-window "https://talk.zendri.zone/"
 bindsym $mod+F8 exec google-chrome-stable --new-window "https://typing.io/lessons" "https://monkeytype.com/" "https://play.typeracer.com/"
+
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"

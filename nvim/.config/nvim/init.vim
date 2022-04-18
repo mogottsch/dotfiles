@@ -52,6 +52,9 @@ call plug#begin()
   Plug 'NTBBloodbath/rest.nvim'
   Plug 'michaeljsmith/vim-indent-object'
   Plug 'wellle/targets.vim'
+  Plug 'justinmk/vim-sneak'
+  Plug 'ThePrimeagen/refactoring.nvim'
+  Plug 'tpope/vim-abolish'
 
   " Git
   Plug 'APZelos/blamer.nvim'
@@ -192,8 +195,8 @@ inoremap <C-j> <esc>:m .+1<CR>==i
 inoremap <C-k> <esc>:m .-2<CR>==i
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-nnoremap <leader>j :m .+1<CR>==
-nnoremap <leader>k :m .-2<CR>==
+" nnoremap <leader>j :m .+1<CR>==
+" nnoremap <leader>k :m .-2<CR>==
 
 " Map Ctrl-Backspace to delete the previous word in insert mode.
 noremap! <C-BS> <C-w>
@@ -205,8 +208,8 @@ nnoremap <leader>x :silent !chmod +x %<CR>
 " Open sessionizer
 nnoremap <silent> <C-f> :silent !tmux neww tmux-sessionizer<CR>
 
-noremap <C-s> :update<CR>
-inoremap <C-s> <C-o>:update<CR>
+noremap <C-s> :w<CR>
+inoremap <C-s> <C-o>:w<CR>
 
 "Open file explorer
 nnoremap <leader>pv :Ex<CR>
@@ -237,3 +240,17 @@ xnoremap p pgvy
 
 command PI PlugInstall
 
+nnoremap <C-q> :call ToggleQFList()<CR>
+
+let g:the_primeagen_qf_l = 0
+let g:the_primeagen_qf_g = 0
+
+fun! ToggleQFList()
+    if g:the_primeagen_qf_g == 1
+        let g:the_primeagen_qf_g = 0
+        cclose
+    else
+        let g:the_primeagen_qf_g = 1
+        copen
+    end
+endfun

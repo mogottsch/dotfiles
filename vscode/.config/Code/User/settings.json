@@ -2,8 +2,8 @@
   "keyboard.dispatch": "keyCode",
   "git.autofetch": true,
   "blade.format.enable": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnType": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
   "editor.fontFamily": "'Consolas ligaturized v2', Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.suggestSelection": "first",
@@ -41,7 +41,7 @@
     "*.ipynb": "jupyter.notebook.ipynb"
   },
   "python.pythonPath": "C:\\ProgramData\\Miniconda3\\python.exe",
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "workbench.editor.wrapTabs": true,
   "workbench.list.automaticKeyboardNavigation": false,
   "rest-client.environmentVariables": {
@@ -117,7 +117,8 @@
     "yaml": true,
     "plaintext": true,
     "markdown": true,
-    "vhdl": false
+    "vhdl": false,
+    "python": true
   },
   "liveServer.settings.CustomBrowser": "chrome",
   "debug.javascript.autoAttachFilter": "disabled",
@@ -166,9 +167,7 @@
   "workbench.colorTheme": "Gruvbox Dark Soft",
   "materialTheme.accent": "Acid Lime",
   "indentRainbow.ignoreErrorLanguages": ["*"],
-  "indentRainbow.excludedLanguages": [
-    "python"
-  ],
+  "indentRainbow.excludedLanguages": ["python"],
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "[cpp]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
@@ -177,8 +176,6 @@
   "editor.guides.bracketPairs": "active",
   "redhat.telemetry.enabled": true,
   "terminal.integrated.persistentSessionReviveProcess": "never",
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [80],
   "window.zoomLevel": 2
 }

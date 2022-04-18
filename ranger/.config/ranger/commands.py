@@ -9,6 +9,11 @@ class paste_as_root(Command):
             self.fm.execute_console("shell sudo cp -r %c .")
 
 
+class delete_as_root(Command):
+    def execute(self):
+        self.fm.execute_console("shell sudo rm -rf %c")
+
+
 class fzf_select(Command):
     """
     :fzf_select

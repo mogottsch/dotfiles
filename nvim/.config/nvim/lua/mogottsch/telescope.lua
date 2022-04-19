@@ -22,4 +22,12 @@ module.search_dotfiles = function()
     })
 end
 
+module.live_grep_with_hidden = function()
+    require('telescope.builtin').live_grep({
+        vimgrep_arguments = {
+            "rg", "--color=never", "--no-heading", "--with-filename",
+            "--line-number", "--column", "--smart-case", "--hidden"
+        }
+    })
+end
 return module

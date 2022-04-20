@@ -34,7 +34,6 @@ call plug#begin()
   Plug 'iamcco/markdown-preview.nvim'
   Plug 'machakann/vim-highlightedyank'
   Plug 'dhruvasagar/vim-table-mode'
-  Plug 'francoiscabrol/ranger.vim' " <Leader>r
   Plug 'sbdchd/neoformat'
   Plug 'neovim/nvim-lspconfig'
   Plug 'williamboman/nvim-lsp-installer'
@@ -56,6 +55,7 @@ call plug#begin()
   Plug 'ThePrimeagen/refactoring.nvim'
   Plug 'tpope/vim-abolish'
   Plug 'ekickx/clipboard-image.nvim'
+  Plug 'kevinhwang91/rnvimr'
 
   " Git
   Plug 'APZelos/blamer.nvim'
@@ -89,8 +89,6 @@ call plug#end()
 let g:camelcasemotion_key = '<leader>'
 let g:highlightedyank_highlight_duration = 200
 
-let g:ranger_map_keys = 0
-
 let g:copilot_no_tab_map = v:true
 
 " auto-format on save
@@ -110,6 +108,8 @@ let g:airline_section_z = "%p%%"
 
 let g:blamer_enabled = 1
 let g:blamer_date_format = '%d.%m.%y'
+
+let g:rnvimr_enable_ex = 1
 
 " Appearance
 "------------------------------------------------------------
@@ -232,7 +232,6 @@ endfun
 
 
 "Plugin mappings
-map <leader>r :Ranger<CR>
 imap <silent><script><expr> <C-l> copilot#Accept("\<CR>")
 nmap <leader>mp <Plug>MarkdownPreviewToggle
 
@@ -256,3 +255,9 @@ nmap <leader>gs :Ge :<CR>
 nmap <leader>gj :diffget //3<CR>
 nmap <leader>gf :diffget //2<CR>
 nmap <leader>gp :G -c push.default=current push<CR>
+
+" rnvimr
+tnoremap <silent> <M-i> <C-\><C-n>:RnvimrResize<CR>
+nnoremap <silent> <M-o> :RnvimrToggle<CR>
+nnoremap <silent> <Leader>r :RnvimrToggle<CR>
+tnoremap <silent> <M-o> <C-\><C-n>:RnvimrToggle<CR>

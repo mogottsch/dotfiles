@@ -55,6 +55,7 @@ call plug#begin()
   Plug 'justinmk/vim-sneak'
   Plug 'ThePrimeagen/refactoring.nvim'
   Plug 'tpope/vim-abolish'
+  Plug 'ekickx/clipboard-image.nvim'
 
   " Git
   Plug 'APZelos/blamer.nvim'
@@ -104,11 +105,6 @@ augroup vairline
 augroup END
 
 set diffopt+=vertical
-nmap <leader>G :Ge :<CR>
-nmap <leader>gs :Ge :<CR>
-nmap <leader>gj :diffget //3<CR>
-nmap <leader>gf :diffget //2<CR>
-nmap <leader>gp :G -c push.default=current push<CR>
 
 let g:airline_section_z = "%p%%"
 
@@ -211,15 +207,29 @@ nnoremap <silent> <C-f> :silent !tmux neww tmux-sessionizer<CR>
 noremap <C-s> :w<CR>
 inoremap <C-s> <C-o>:w<CR>
 
-"Open file explorer
-nnoremap <leader>pv :Ex<CR>
-
 nnoremap <C-j> :cnext<CR>
 nnoremap <C-k> :cprev<CR>
 
 " whole buffer
 nnoremap yie ggyG``
 nnoremap die ggdG
+
+nnoremap <C-q> :call ToggleQFList()<CR>
+
+let g:the_primeagen_qf_l = 0
+let g:the_primeagen_qf_g = 0
+
+fun! ToggleQFList()
+    if g:the_primeagen_qf_g == 1
+        let g:the_primeagen_qf_g = 0
+        cclose
+    else
+        let g:the_primeagen_qf_g = 1
+        copen
+    end
+endfun
+
+
 
 "Plugin mappings
 map <leader>r :Ranger<CR>
@@ -240,17 +250,9 @@ xnoremap p pgvy
 
 command PI PlugInstall
 
-nnoremap <C-q> :call ToggleQFList()<CR>
-
-let g:the_primeagen_qf_l = 0
-let g:the_primeagen_qf_g = 0
-
-fun! ToggleQFList()
-    if g:the_primeagen_qf_g == 1
-        let g:the_primeagen_qf_g = 0
-        cclose
-    else
-        let g:the_primeagen_qf_g = 1
-        copen
-    end
-endfun
+" Fugitive
+nmap <leader>G :Ge :<CR>
+nmap <leader>gs :Ge :<CR>
+nmap <leader>gj :diffget //3<CR>
+nmap <leader>gf :diffget //2<CR>
+nmap <leader>gp :G -c push.default=current push<CR>

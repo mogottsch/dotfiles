@@ -1,0 +1,61 @@
+#!/bin/bash
+
+# retrieve command line flag
+# -q quality (low, medium, high; default = medium)
+
+while getopts ":q:" opt; do
+  case $opt in
+    q)
+      QUALITY=$OPTARG
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
+
+
+if [ -z "$QUALITY" ]; then
+  QUALITY="medium"
+
+  elif [ "$QUALITY" != "low" ] && [ "$QUALITY" != "medium" ] && [ "$QUALITY" != "high" ]; then
+    echo "Invalid quality flag: $QUALITY (must be low, medium, or high)"
+    exit 1
+fi
+
+output_dir="./output"
+
+if [ ! -d "$output_dir" ]; then
+  mkdir $output_dir
+fi
+
+
+search_dir=$PWD
+
+echo "Number of found files: $(find $search_dir -name "*.pdf" | wc -l)"
+
+declare -A pdf_quality_map
+pdf_quality_map["low"]="/screen"
+pdf_quality_map["medium"]="/ebook"
+pdf_quality_map["high"]="/printer"
+
+pdf_quality=${pdf_quality_map[$QUALITY]}
+
+for entry in "$search_dir"/*
+do
+  # if the entry does not end with pdf, skip it
+  if [ "${entry##*.}" != "pdf" ]; then
+    continue
+  fi
+  echo "$entry"
+
+
+  gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=$pdf_quality \
+  -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$output_dir/$(basename "$entry").pdf" \
+  "$entry"
+done

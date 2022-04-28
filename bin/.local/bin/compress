@@ -51,6 +51,8 @@ pdf_quality_map["high"]="/printer"
 
 pdf_quality=${pdf_quality_map[$QUALITY]}
 
+OIFS="$IFS"
+IFS=$'\n'
 for entry in `find . -type f -name "*.pdf"`
 do
   # if the entry does not end with pdf, skip it

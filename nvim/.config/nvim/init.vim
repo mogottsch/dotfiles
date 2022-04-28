@@ -109,7 +109,12 @@ let g:airline_section_z = "%p%%"
 let g:blamer_enabled = 1
 let g:blamer_date_format = '%d.%m.%y'
 
+" replace netrw with ranger
 let g:rnvimr_enable_ex = 1
+" wipe buffer when deleted from ranger
+let g:rnvimr_enable_bw = 1
+" Hide ranger after a file is selected
+let g:rnvimr_enable_picker = 1
 
 " Appearance
 "------------------------------------------------------------

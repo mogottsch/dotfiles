@@ -28,16 +28,21 @@ if [ -z "$QUALITY" ]; then
     exit 1
 fi
 
+
+search_dir=$PWD
+
+# convert all pptx files in current directory to pdf and write to tmp directory
+for file in `find . -type f -name "*.pptx"`;
+do
+  echo "Converting $file"
+  soffice --headless --convert-to pdf:writer_pdf_Export --outdir "$search_dir" "$file" >> /dev/null
+done
+
 output_dir="./output"
 
 if [ ! -d "$output_dir" ]; then
   mkdir $output_dir
 fi
-
-
-search_dir=$PWD
-
-echo "Number of found files: $(find $search_dir -name "*.pdf" | wc -l)"
 
 declare -A pdf_quality_map
 pdf_quality_map["low"]="/screen"
@@ -46,16 +51,16 @@ pdf_quality_map["high"]="/printer"
 
 pdf_quality=${pdf_quality_map[$QUALITY]}
 
-for entry in "$search_dir"/*
+for entry in `find . -type f -name "*.pdf"`
 do
   # if the entry does not end with pdf, skip it
   if [ "${entry##*.}" != "pdf" ]; then
     continue
   fi
-  echo "$entry"
+  echo "Compressing $entry"
 
 
   gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=$pdf_quality \
-  -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$output_dir/$(basename "$entry").pdf" \
+  -dNOPAUSE -dQUIET -dBATCH -sOutputFile="$output_dir/$(basename "$entry")" \
   "$entry"
 done

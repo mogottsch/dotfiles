@@ -6,7 +6,18 @@ require('telescope').setup {
         file_previewer = previewers.vim_buffer_cat.new,
         grep_previewer = require("telescope.previewers").vim_buffer_vimgrep.new,
         mappings = {i = {['<C-q>'] = actions.send_to_qflist}}
+    },
+    pickers = {
+        buffers = {
+            show_all_buffers = true,
+            sort_lastused = true,
+            mappings = {
+                i = {["<c-d>"] = "delete_buffer"},
+                n = {["<c-d>"] = "delete_buffer"}
+            }
+        }
     }
+
 }
 
 require('telescope').load_extension('fzf')

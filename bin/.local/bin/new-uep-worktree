@@ -1,0 +1,33 @@
+#!/usr/bin/bash
+
+pwd=$(pwd)
+dirname=$(basename $pwd)
+
+develop_dir=${pwd/"$dirname"/develop}
+
+if [ ! -e $develop_dir ]; then
+    echo "develop worktree folder not found"
+    echo $develop_dir
+    exit 1
+fi
+
+cp $develop_dir/.env $pwd/.env
+cp $develop_dir/laravel/.env $pwd/laravel/.env
+cp $develop_dir/docker-compose.override.yml $pwd/docker-compose.override.yml
+
+pushd $pwd/laravel
+npm install
+popd
+
+docker-compose up -d
+
+# Generate dynamic JS files
+docker-compose exec phpfpm php artisan ziggy:generate
+docker-compose exec phpfpm php artisan constants:generate
+
+# Run the Settings Table seeder (will register potential new settings and load defaults)
+docker-compose exec phpfpm php artisan db:seed --force --class=SettingsTableSeeder
+
+docker-compose exec phpfpm php artisan queue:restart
+
+notify-send "New uep worktree ready"

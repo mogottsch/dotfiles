@@ -1,0 +1,16 @@
+#!/bin/bash
+
+BATPATH=/sys/class/power_supply/BAT0
+BAT_STATUS=$BATPATH/status
+BAT_NOW=$BATPATH/capacity
+bf=$(cat $BAT_STATUS)
+bn=$(cat $BAT_NOW)
+if [ $(( $bn )) -lt 90 ] \
+    && [ "$bf" != "Charging" ];
+then
+    if [ $(( $bn )) -lt 5 ];
+    then
+        systemctl suspend
+    fi
+    notify-send "Low battery!" "Please charge now"
+fi

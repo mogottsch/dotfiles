@@ -36,6 +36,8 @@ call plug#begin()
   Plug 'dhruvasagar/vim-table-mode'
   Plug 'sbdchd/neoformat'
   Plug 'neovim/nvim-lspconfig'
+  Plug 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
+  Plug 'ray-x/navigator.lua'
   Plug 'williamboman/nvim-lsp-installer'
   Plug 'morhetz/gruvbox'
   Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
@@ -43,6 +45,7 @@ call plug#begin()
   Plug 'vim-airline/vim-airline'
   Plug 'edkolev/tmuxline.vim'
   Plug 'L3MON4D3/LuaSnip'
+  Plug 'rafamadriz/friendly-snippets'
   Plug 'github/copilot.vim'
   Plug 'ThePrimeagen/harpoon'
   Plug 'lukas-reineke/indent-blankline.nvim'
@@ -75,6 +78,7 @@ call plug#begin()
   Plug 'hrsh7th/cmp-nvim-lua' " nvim specific lua
   Plug 'hrsh7th/nvim-cmp'
   Plug 'saadparwaiz1/cmp_luasnip'
+  Plug 'ray-x/cmp-treesitter'
 
   " Telescope
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
@@ -214,6 +218,9 @@ inoremap <C-s> <C-o>:w<CR>
 
 nnoremap <C-j> :cnext<CR>
 nnoremap <C-k> :cprev<CR>
+
+" Find selected in current buffer
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 " whole buffer
 nnoremap yie ggyG``

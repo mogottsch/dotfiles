@@ -1,6 +1,7 @@
 lua require('mogottsch.telescope')
 
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fsg <cmd>lua require('mogottsch.telescope').live_grep_in_folder()<cr>
 nnoremap <leader>faf <cmd>lua require('telescope.builtin').find_files({ hidden = true, no_ignore = true })<cr>
 nnoremap <leader>fag <cmd>lua require('mogottsch.telescope').live_grep_with_hidden()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>

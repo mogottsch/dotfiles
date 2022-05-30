@@ -24,7 +24,7 @@ plugins=(
     history-substring-search 
     zsh-autosuggestions 
     zsh-syntax-highlighting 
-    zsh-vi-mode
+    # zsh-vi-mode
 )
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
@@ -41,13 +41,15 @@ source $ZSH/oh-my-zsh.sh
 _comp_options+=(globdots)
 
 function init_keybindings() {
-    bindkey -s ^F "tmux-sessionizer\n"
     [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
     [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+    bindkey -s ^F "tmux-sessionizer\n"
 }
+init_keybindings
 
 # init fzf after zsh-vi-mode to fix conflicting keybindings
-zvm_after_init_commands+=(init_keybindings)
+# zvm_after_init_commands+=(init_keybindings)
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

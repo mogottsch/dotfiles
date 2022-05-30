@@ -59,6 +59,7 @@ call plug#begin()
   Plug 'tpope/vim-abolish'
   Plug 'ekickx/clipboard-image.nvim'
   Plug 'kevinhwang91/rnvimr'
+  Plug 'ap/vim-css-color'
 
   " Git
   Plug 'APZelos/blamer.nvim'
@@ -94,6 +95,7 @@ let g:camelcasemotion_key = '<leader>'
 let g:highlightedyank_highlight_duration = 200
 
 let g:copilot_no_tab_map = v:true
+let g:copilot_node_command = "~/.nvm/versions/node/v16.13.2/bin/node"
 
 " auto-format on save
 augroup fmt

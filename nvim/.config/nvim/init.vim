@@ -60,6 +60,7 @@ call plug#begin()
   Plug 'ekickx/clipboard-image.nvim'
   Plug 'kevinhwang91/rnvimr'
   Plug 'ap/vim-css-color'
+  Plug 'lervag/vimtex'
 
   " Git
   Plug 'APZelos/blamer.nvim'
@@ -182,6 +183,7 @@ set smartindent
 "------------------------------------------------------------
 " Mappings
 let mapleader = " "
+let maplocalleader = " "
 
 noremap <Leader><Leader>c :source $MYVIMRC<cr>
 

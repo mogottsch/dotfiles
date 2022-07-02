@@ -71,13 +71,12 @@ bindsym $mod+Ctrl+m exec pavucontrol
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec google-chrome-stable --new-window "http://localhost:7777/blank.html"
+bindsym $mod+F2 exec google-chrome-beta --new-window "http://localhost:7777/blank.html"
 # bindsym $mod+F3 exec pcmanfm
 bindsym $mod+F3 exec terminal -e open-ranger-pwd
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F7 exec google-chrome-stable --new-window "https://clockify.me/tracker" "https://gitlab.zendri.com/uep/platform" "https://projects.zendri.zone/projects/jsd-bb-umsetzung/"; \
-                exec google-chrome-stable --new-window "https://talk.zendri.zone/"
-bindsym $mod+F8 exec google-chrome-stable --new-window "https://typing.io/lessons" "https://monkeytype.com/" "https://play.typeracer.com/"
+bindsym $mod+F7 exec google-chrome-beta --new-window "https://clockify.me/tracker" "https://gitlab.zendri.com/uep/platform" "https://projects.zendri.zone/projects/jsd-bb-umsetzung/";
+bindsym $mod+F8 exec google-chrome-beta --new-window "https://typing.io/lessons" "https://monkeytype.com/" "https://play.typeracer.com/"
 
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
@@ -224,7 +223,6 @@ assign [class="Code"] $ws3
 assign [class="GitKraken"] $ws5
 assign [class="Rocket.Chat"] $ws6
 for_window [class="Spotify"] move container to workspace $ws8
-assign [class="Ferdium"] $ws6
 
 # Open specific applications in floating mode
 # for_window [title="alsamixer"] floating enable border pixel 1
@@ -337,8 +335,8 @@ exec --no-startup-id nginx -c /home/moritz/dev/privat/static-server/nginx.conf -
 # run wallpaper-crawler python script
 exec --no-startup-id /home/moritz/miniconda3/envs/wallpaper-crawler/bin/python /home/moritz/dev/privat/wallpaper-crawler/crawl.py /srv/backgrounds/random_wallpaper.jpg
 exec --no-startup-id ssh-add
-exec ferdium
 exec i3-msg 'workspace 8:; exec feh ~/dotfiles/keylayout/layer_screenshot.png'
+exec google-chrome-beta --new-window "https://mail.google.com/mail/u/0/" "https://app.slack.com/client/T03ADKTHE3V/C03AAPBMYF7" "https://web.whatsapp.com/" "https://talk.zendri.zone/"
 
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
@@ -389,7 +387,7 @@ bar {
 
         bindsym button4 nop
         bindsym button5 nop
-        font xft:URWGothic-Book 15
+        font xft:URWGothic-Book 9
         # font pango:DejaVu Sans Mono 10
         strip_workspace_numbers yes
 
@@ -426,8 +424,8 @@ bindsym $mod+m bar mode toggle
 #############################
 
 # Set inner/outer gaps
-gaps inner 14
-gaps outer -2
+gaps inner 4
+gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>

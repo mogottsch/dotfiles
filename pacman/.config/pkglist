@@ -29,6 +29,7 @@ btrfs-progs
 bzip2
 cantarell-fonts
 chntpw
+cmake
 coin-or-cbc
 conda-zsh-completion
 copyq
@@ -39,6 +40,7 @@ cronie
 cryptsetup
 cuda
 darknet-alexeyab-git
+dataspell
 dataspell-jre
 dbeaver
 deluge
@@ -68,7 +70,6 @@ f2fs-tools
 fakeroot
 fd
 feh
-ferdium-git
 ffmpeg
 ffmpegthumbnailer
 file
@@ -79,6 +80,7 @@ firefox
 flac
 flameshot
 flex
+fusee-launcher-git
 gawk
 gcc
 gcc-fortran
@@ -96,7 +98,7 @@ gnumeric
 go
 gomuks
 google-chrome
-google-cloud-sdk
+google-chrome-beta
 gparted
 grep
 grub
@@ -130,10 +132,10 @@ inxi
 iproute2
 iputils
 java-runtime-common
+java11-openjfx
 jdk8-openjdk
 jdownloader2
 jfsutils
-joplin-appimage
 jq
 jre-openjdk
 jre8-openjdk
@@ -204,7 +206,6 @@ nameinator
 nano
 ncdu
 ncurses5-compat-libs
-neovim
 netctl
 network-manager-applet
 networkmanager
@@ -224,6 +225,7 @@ ntp
 nvidia-utils
 nvm
 nvtop
+obsidian
 oh-my-zsh
 openmotif
 openresolv
@@ -255,6 +257,7 @@ procps-ng
 psmisc
 python-black
 python-nbdime
+python-openpyxl
 python-pyalsa
 python-pycups
 python-pynvim
@@ -296,6 +299,7 @@ systemd
 systemd-fsck-silent
 systemd-sysvcompat
 tar
+teamviewer
 terminus-font
 termshark
 texinfo
@@ -326,6 +330,7 @@ ttf-inconsolata
 ttf-indic-otf
 ttf-liberation
 ttf-meslo-nerd-font-powerlevel10k
+ttf-times-new-roman
 udiskie
 unrar
 unzip
@@ -348,6 +353,7 @@ wallpapers-juhraya
 wget
 which
 wine-mono
+winetricks
 wmutils
 wpa_supplicant
 x11-ssh-askpass
@@ -390,6 +396,7 @@ zensu
 zip
 zoom
 zotero-git
+zram-generator
 zsh-autosuggestions
 zsh-completions
 zsh-history-substring-search

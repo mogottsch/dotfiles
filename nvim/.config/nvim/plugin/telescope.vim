@@ -14,3 +14,4 @@ nnoremap <leader>fd :lua require('mogottsch.telescope').search_dotfiles()<cr>
 nnoremap <leader>fw :lua require('telescope').extensions.git_worktree.git_worktrees()<cr>
 nnoremap <leader>cw :lua require('telescope').extensions.git_worktree.create_git_worktree()<cr>
 nnoremap <C-c> :lua require('telescope.builtin').builtin()<cr>
+nnoremap <leader>@ :lua require('telescope.builtin').treesitter()<cr>

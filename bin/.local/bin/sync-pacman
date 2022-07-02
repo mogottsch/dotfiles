@@ -1,3 +1,4 @@
 #!/bin/bash
 
 pacman -Qqe > ~/.config/pkglist
+echo "Saved package list to ~/.config/pkglist"

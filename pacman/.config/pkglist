@@ -140,8 +140,10 @@ jq
 jre-openjdk
 jre8-openjdk
 kazam
+kdialog
 ksshaskpass
 kvantum-manjaro
+lazygit
 less
 lib32-dbus
 lib32-flex
@@ -354,6 +356,7 @@ wget
 which
 wine-mono
 winetricks
+wireguard-tools
 wmutils
 wpa_supplicant
 x11-ssh-askpass

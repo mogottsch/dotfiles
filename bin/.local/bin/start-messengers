@@ -1,0 +1,3 @@
+#!/bin/bash
+
+i3-msg 'workspace 6; exec google-chrome-beta --new-window "https://mail.google.com/mail/u/0/" "https://app.slack.com/client/T03ADKTHE3V/C03AAPBMYF7" "https://web.whatsapp.com/" "https://talk.zendri.zone/" --profile-directory="Default";'

@@ -211,6 +211,7 @@ workspace $ws1 output HDMI-0
 workspace $ws2 output HDMI-0
 workspace $ws3 output HDMI-0
 workspace $ws4 output HDMI-0
+workspace $ws6 output DP-4
 workspace $ws5 output DP-4
 
 # Open applications on specific workspaces
@@ -336,7 +337,7 @@ exec --no-startup-id nginx -c /home/moritz/dev/privat/static-server/nginx.conf -
 exec --no-startup-id /home/moritz/miniconda3/envs/wallpaper-crawler/bin/python /home/moritz/dev/privat/wallpaper-crawler/crawl.py /srv/backgrounds/random_wallpaper.jpg
 exec --no-startup-id ssh-add
 exec i3-msg 'workspace 8:; exec feh ~/dotfiles/keylayout/layer_screenshot.png'
-exec google-chrome-beta --new-window "https://mail.google.com/mail/u/0/" "https://app.slack.com/client/T03ADKTHE3V/C03AAPBMYF7" "https://web.whatsapp.com/" "https://talk.zendri.zone/"
+exec start-messengers
 
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor

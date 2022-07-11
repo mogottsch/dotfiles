@@ -44,8 +44,6 @@ call plug#begin()
   Plug 'sainnhe/gruvbox-material'
   Plug 'vim-airline/vim-airline'
   Plug 'edkolev/tmuxline.vim'
-  Plug 'L3MON4D3/LuaSnip'
-  Plug 'rafamadriz/friendly-snippets'
   Plug 'github/copilot.vim'
   Plug 'ThePrimeagen/harpoon'
   Plug 'lukas-reineke/indent-blankline.nvim'
@@ -61,6 +59,11 @@ call plug#begin()
   Plug 'kevinhwang91/rnvimr'
   Plug 'ap/vim-css-color'
   Plug 'lervag/vimtex'
+
+  " Snippets
+  Plug 'L3MON4D3/LuaSnip'
+  Plug 'rafamadriz/friendly-snippets'
+  Plug 'dsznajder/vscode-react-javascript-snippets'
 
   " Git
   Plug 'APZelos/blamer.nvim'
